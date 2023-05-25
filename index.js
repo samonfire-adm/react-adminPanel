@@ -6,6 +6,7 @@ const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const movieRoute = require("./routes/movies");
 const listRoute = require("./routes/lists");
+const PORT = process.env.PORT || 8800
 
 dotenv.config();
 
@@ -27,6 +28,6 @@ app.use("/api/users", userRoute);
 app.use("/api/movies", movieRoute);
 app.use("/api/lists", listRoute);
 
-app.listen(8800, () => {
+app.listen(PORT, () => {
   console.log("Backend server is running!");
 });
